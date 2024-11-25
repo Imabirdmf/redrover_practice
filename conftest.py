@@ -18,7 +18,7 @@ def driver():
     }
 
     options.add_experimental_option('prefs', prefs)
-    options.add_argument('--headless')
+    # options.add_argument('--headless')
     # options.add_argument('--window-size=1000,1000')
     # options.add_argument('--incognito')
     # options.add_argument('--ignore-certificate-errors')

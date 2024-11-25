@@ -2,6 +2,7 @@ from selenium.webdriver.chrome.webdriver import WebDriver
 from selenium.webdriver.support.ui import WebDriverWait as wait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver import ActionChains
+import time
 
 
 class BasePage:
@@ -32,4 +33,20 @@ class BasePage:
     def right_click(self, elem):
         action = ActionChains(self.driver)
         action.context_click(elem)
+        action.perform()
+
+    def action_move_to_element(self, elem):
+        action = ActionChains(self.driver)
+        action.move_to_element(elem)
+        # time.sleep(5)
+        action.perform()
+
+    def action_drag_and_drop(self, source_elem, target_elem):
+        action = ActionChains(self.driver)
+        action.drag_and_drop(source_elem, target_elem)
+        action.perform()
+
+    def action_drag_and_drop_by_offset(self, elem, xoffset, yoffset):
+        action = ActionChains(self.driver)
+        action.drag_and_drop_by_offset(elem, xoffset, yoffset)
         action.perform()
