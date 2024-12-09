@@ -6,5 +6,6 @@ class Urls:
     demoqa_droppable_url = 'https://demoqa.com/droppable'
     demoqa_draggable_url = 'https://demoqa.com/dragabble'
     demoqa_select_url = "https://demoqa.com/select-menu"
+    demoqa_window_url = "https://demoqa.com/browser-windows"
 
     reg_url = "https://russia.ru/register"
