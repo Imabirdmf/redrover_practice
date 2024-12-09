@@ -10,3 +10,9 @@ class BrowserWindow(BasePage):
         self.driver.switch_to.window(self.driver.window_handles[1])
         text_title = self.element_is_present(self.locators.NEW_TAB_PAGE).text
         return text_title
+
+    def check_opened_new_window(self):
+        self.element_is_visible(self.locators.NEW_WINDOW).click()
+        self.driver.switch_to.window(self.driver.window_handles[-1])
+        text_title = self.element_is_present(self.locators.NEW_TAB_PAGE).text
+        return text_title
